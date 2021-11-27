@@ -1,5 +1,5 @@
-ortools
-tox
-black
-flake8
-isort
+ortools==9.1.9490
+tox==3.24.4
+black==19.10b0
+flake8==4.0.1
+isort==5.10.1
