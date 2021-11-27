@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-   This model is implementation of food manufacture 2 problem [example #1]
+   This model is implementation of food manufacture 2 problem [example #2]
    listed in fifth edition of Modeling Building in Mathematical Programming
    by H. P. Williams on pages 255 and 299 – 300.
    Optimization model written below uses Google OR-Tools
