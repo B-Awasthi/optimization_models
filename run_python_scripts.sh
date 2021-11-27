@@ -7,7 +7,7 @@ echo
 echo running shell script : "${0}"
 
 # put the path to the python interpreter 
-path_to_python="/home/bawasthi/anaconda3/envs/ortools/bin/python"
+# path_to_python="/home/bawasthi/anaconda3/envs/ortools/bin/python"
 
 python_scripts=$(ls *.py)
 echo
@@ -15,7 +15,8 @@ count=1
 for fls in $python_scripts
 do
     echo "running script $count: $fls"
-    "$path_to_python" "$fls"
+#    "$path_to_python" "$fls"
+    python "$fls"
     if [ "$?" -ne 0 ]
     then
         echo "script $fls didn't execute successfully"
