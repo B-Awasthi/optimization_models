@@ -160,7 +160,20 @@ obj_func = (
 model.Maximize(obj_func)
 
 status = model.Solve()
-solver_walltime_secs = model.wall_time() / 1000  # in seconds
 
-print("Total profits = " + str(model.Objective().Value()))
-print("Solver wall time = " + str(solver_walltime_secs) + " secs")
+# test if solution is optimal
+if status == pywraplp.Solver.OPTIMAL:
+    print("Solution:")
+    print("Objective value =", model.Objective().Value())
+else:
+    print("The problem does not have an optimal solution.")
+
+print("\n")
+print("Problem size:")
+print("Number of decision variables =", model.NumVariables())
+print("Number of constraints =", model.NumConstraints())
+
+print("\n")
+print("Advanced usage:")
+print("Problem solved in %s seconds" % str(model.wall_time() / 1000))
+print("Problem solved in %s iterations" % str(model.iterations()))

@@ -214,5 +214,3 @@ print("Advanced usage:")
 print("Problem solved in %s seconds" % str(model.wall_time() / 1000))
 print("Problem solved in %s iterations" % str(model.iterations()))
 print("Problem solved in %d branch-and-bound nodes" % model.nodes())
-
-solver_walltime_secs = model.wall_time() / 1000  # in seconds
