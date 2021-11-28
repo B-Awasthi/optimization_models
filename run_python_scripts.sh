@@ -16,6 +16,7 @@ for fls in $python_scripts
 do
     echo "running script $count: $fls"
 #    "$path_to_python" "$fls"
+    echo
     python "$fls"
     if [ "$?" -ne 0 ]
     then
@@ -24,6 +25,7 @@ do
     fi
     echo
     (( count++ ))
+    echo ---------------------------------------------------------------------------
 done
 echo Done!
 exit 0
